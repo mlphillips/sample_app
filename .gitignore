@@ -14,4 +14,9 @@
 /log/*.log
 /tmp
 
+# other files to exclude
+
 /.idea
+
+
+
