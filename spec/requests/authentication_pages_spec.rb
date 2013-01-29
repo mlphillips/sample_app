@@ -30,7 +30,12 @@ describe "Authentication" do
 
     describe "with valid information" do
       let(:user) {FactoryGirl.create(:user) }
-      before { sign_in user }
+      before { valid_signin user }
+      #before do
+      #  fill_in "Email",    with: user.email
+      #  fill_in "Password", with: user.password
+      #  click_button "Sign in"
+      #end
 
       it { should have_selector('title',text: user.name) }
       it { should have_link('Profile', href: user_path(user)) }
